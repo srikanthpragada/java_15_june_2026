@@ -12,5 +12,8 @@ public class Square {
 		 
 		 int square = num * num;
 		 System.out.printf("Square of %d is %d", num, square);
+		 
+		 s.close();
+		 
 	}
 }
