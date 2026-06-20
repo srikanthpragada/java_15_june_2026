@@ -1,12 +1,25 @@
 package oop1;
-
+ 
 public class Counter {
 	// instance variables
-	private int value;
+	private int value; 
+	
+	// constructor overloading
+	public Counter() {
+		System.out.println("Default Constructor");
+	}
+	
+	public Counter(int v) {
+		value = v;
+	}
 
-	// methods
+	// methods overloading 
 	public void inc() {
 		value++;
+	}
+	
+	public void inc(int step) {
+		value += step;
 	}
 
 	public void dec() {
