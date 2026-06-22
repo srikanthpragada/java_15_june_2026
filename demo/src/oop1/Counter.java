@@ -9,24 +9,24 @@ public class Counter {
 		System.out.println("Default Constructor");
 	}
 	
-	public Counter(int v) {
-		value = v;
+	public Counter(int value) {
+		this.value = value;
 	}
 
 	// methods overloading 
 	public void inc() {
-		value++;
+		this.value++;
 	}
 	
 	public void inc(int step) {
-		value += step;
+		this.value += step;
 	}
 
 	public void dec() {
-		value--;
+		this.value--;
 	}
 	
 	public int getValue() {
-		return value;
+		return this.value;
 	}
 }
