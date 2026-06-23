@@ -6,6 +6,10 @@ class Account {
 	private String customer;
 	private double balance;
 	
+	public static int getMinBal() {
+		return minbal;
+	}
+	
 	// static variable or class variable 
 	private static int minbal = 10000;
 
