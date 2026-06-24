@@ -26,17 +26,29 @@ class Manager extends Employee  {
 		this.hra = hra;
 	}
 	
+	// Overriding 
+	@Override 
 	public int getSalary() {
 		return this.salary + this.hra;
 	}
-	
 }
 
 public class TestEmployees {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		 Employee e = new Employee("Brian", 60000);
+		 Manager m = new Manager("Martin",100000, 30000);
 
+		 System.out.println(e.getName());
+		 System.out.println(e.getSalary());
+		 
+		 System.out.println(m.getName());
+		 System.out.println(m.getSalary());
+		 
+ 		 e = m;  // Upcasting 
+		 
+		 if(e instanceof Manager)
+		      m =  (Manager) e;  // Downcasting 
 	}
 
 }
