@@ -46,9 +46,16 @@ public class TestEmployees {
 		 System.out.println(m.getSalary());
 		 
  		 e = m;  // Upcasting 
+ 		 
+ 		 //m = e;
 		 
 		 if(e instanceof Manager)
 		      m =  (Manager) e;  // Downcasting 
+		 
+		 if(e instanceof Manager man) {
+			  System.out.println(man.getSalary());
+		 }
+		       
 	}
 
 }
