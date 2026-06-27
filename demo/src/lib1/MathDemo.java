@@ -7,5 +7,6 @@ public class MathDemo {
 		System.out.println(Math.min(10, 20));
 		System.out.println(Math.round(10.636));
 		System.out.println(Math.random()*100);
+
 	}
 }
