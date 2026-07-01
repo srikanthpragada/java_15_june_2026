@@ -3,4 +3,6 @@
     <fullyQualifiedTypeName name="oop1.DiscountProduct"/>
     <fullyQualifiedTypeName name="oop1.PaymentModes"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
 </qualifiedTypeNameHistroy>
