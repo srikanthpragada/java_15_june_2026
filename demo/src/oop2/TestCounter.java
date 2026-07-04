@@ -1,5 +1,7 @@
 package oop2;
 
+import static java.lang.System.out;
+
 class MyCounter implements Counter {
 	private int value = 1;
 
@@ -25,11 +27,10 @@ public class TestCounter {
 	public static void main(String[] args) {
 		MyCounter c1 = new MyCounter();
 		c1.inc();
-		
 
 		Counter c2 = new MyCounter();
 		c2.inc();
-		System.out.println(c2.getValue());
+		out.println(c2.getValue());
 
 	}
 
