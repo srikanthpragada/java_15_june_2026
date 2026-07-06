@@ -2,6 +2,7 @@ package oop2;
 
 import static java.lang.System.out;
 
+
 class MyCounter implements Counter {
 	private int value = 1;
 
@@ -12,6 +13,7 @@ class MyCounter implements Counter {
 
 	@Override
 	public void dec() {
+		 
 		this.value--;
 	}
 
