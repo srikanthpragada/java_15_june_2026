@@ -2,7 +2,7 @@ package lib2;
 
 import java.util.TreeSet;
 
-class Circle {
+class Circle implements Comparable<Circle> {
 	private int radius;
 	public Circle(int radius) {
 		super();
@@ -18,10 +18,13 @@ class Circle {
 	public int hashCode() {
 		return this.radius;
 	}
+	@Override
+	public int compareTo(Circle other) {
+		return  this.radius  - other.radius;
+	}
 }
 
 public class SetDemo {
-
 	public static void main(String[] args) {
 		var circles = new TreeSet<Circle>();
 
