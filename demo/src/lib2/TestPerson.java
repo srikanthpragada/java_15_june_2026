@@ -38,8 +38,30 @@ class ComparePersons implements Comparator<Person> {
 }
 
 public class TestPerson {
+
+	public static int comparePersons(Person p1, Person p2) {
+		return p1.getAge() - p2.getAge();
+	}
+
 	public static void main(String[] args) {
-		var people = new TreeSet<Person>(new ComparePersons());
+		// var people = new TreeSet<Person>(new ComparePersons());
+
+//		Comparator<Person> obj = (p1, p2) -> p1.getAge() - p2.getAge();
+//		System.out.println(obj.getClass());
+
+		// Lambda Expression
+		// var people = new TreeSet<Person>((p1, p2) -> p1.getAge() - p2.getAge());
+
+		// Lambda Block
+//		var people = new TreeSet<Person>((p1, p2) -> { 
+//			 // code 
+//			 return p1.getAge() - p2.getAge();
+//			}
+//		);
+
+		// Method Reference
+		var people = new TreeSet<Person>(TestPerson::comparePersons);
+
 		people.add(new Person("Jack", 25));
 		people.add(new Person("Andy", 23));
 		people.add(new Person("Steve", 27));
