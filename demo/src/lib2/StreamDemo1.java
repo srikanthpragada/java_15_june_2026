@@ -11,14 +11,14 @@ class PrintNumber implements Consumer<Integer> {
 }
 
 public class StreamDemo1 {
-
 	public static void main(String[] args) {
 		var s = Stream.of(1, 4, 2, 2, 5, 8, 7);
 
 		s.distinct()
 		 .sorted()
 		 //.forEach(new PrintNumber()); // Consumer
-		 .forEach(v -> System.out.println(v));
+		 //.forEach(v -> System.out.println(v));  // Lambda expression
+		 .forEach(System.out::println);   // Method reference 
 	}
 
 }
