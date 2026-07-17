@@ -1,0 +1,37 @@
+JDBC Driver URL : https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc
+
+
+
+CREATE TABLE DEPARTMENTS (
+    DEPT_ID   VARCHAR(2)   PRIMARY KEY,
+    DEPT_NAME VARCHAR(30)  NOT NULL
+);
+
+
+insert into departments values('hr', 'Human Resource');
+insert into departments values('it', 'Information Technology');
+insert into departments values('fi', 'Finance');
+
+CREATE TABLE EMPLOYEES (
+    EMP_ID       INTEGER      PRIMARY KEY AUTOINCREMENT,
+    EMP_NAME     VARCHAR (30) NOT NULL,
+    EMP_JOB      VARCHAR (10) DEFAULT 'JP',
+    EMP_SALARY   INTEGER      CHECK (EMP_SALARY > 100000),
+    EMP_DEPT_ID  VARCHAR (2)  REFERENCES DEPARTMENTS(DEPT_ID)
+);
+
+insert into employees(emp_name, emp_job, emp_salary, emp_dept_id)
+   values('Andy Roberts','SP',1500000, 'it');
+ 
+
+insert into employees(emp_name, emp_job, emp_salary, emp_dept_id)
+   values('Joe Stanger','FM',2000000, 'fi');
+
+insert into employees(emp_name, emp_job, emp_salary, emp_dept_id)
+   values('Emily Henry','HM',2100000, 'hr');
+
+insert into employees(emp_name, emp_job, emp_salary, emp_dept_id)
+   values('Steve Colbert','PL',3000000, 'it');
+
+insert into employees(emp_name, emp_job, emp_salary, emp_dept_id)
+   values('James Goodwill','AC',3000000, 'fi');
