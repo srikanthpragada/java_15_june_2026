@@ -10,18 +10,21 @@
 <body>
 
 	<%
-	Class.forName("org.sqlite.JDBC");
+	Class.forName("org.sqlite.JDBC"); // Load JDBC Driver 
 	String url = "jdbc:sqlite:c:/classroom/jun15j/payroll.db";
 
 	try (Connection conn = DriverManager.getConnection(url)) {
 
-		var employeeId = request.getParameter("id");
-		var newSalary = request.getParameter("salary");
-		var ps = conn.prepareStatement("update employees set emp_salary = ? where emp_id = ?");
-		ps.setString(1, newSalary);
-		ps.setString(2, employeeId);
+		var employeeId = Integer.parseInt(request.getParameter("id"));
+		var newSalary = Integer.parseInt(request.getParameter("salary"));
+
+		var ps = conn.prepareStatement
+				("update employees set emp_salary = ? where emp_id = ?");
+		ps.setInt(1, newSalary);
+		ps.setInt(2, employeeId);
 
 		int count = ps.executeUpdate();
+		
 		if (count == 1)
 			out.println("<h2>Updated Successfully! </h2>");
 		else

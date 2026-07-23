@@ -1,0 +1,22 @@
+
+body {
+	font-size:12pt;
+	font-family:verdana;
+}
+
+h1 {
+	color:Blue;
+}
+
+.banner {
+	background-color:maroon;
+	color:white;
+	font-weight :800;
+	font-size:24pt;
+}
+
+.menu {
+	background-color: #cccccc;
+	font-weight:800;
+	font-size:14pt;
+}

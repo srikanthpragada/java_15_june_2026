@@ -11,7 +11,7 @@
 	<h2>Skills</h2>
 	<form action="skills.jsp">
 		Skill : <input type="text" name="skill" />
-		<p></p> 
+		<p></p>
 		<input type="submit" value="Submit" />
 	</form>
 
