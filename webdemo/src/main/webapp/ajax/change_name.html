@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Change Employee Name</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+	function getName() {
+		// url, params, callback
+		url = "empname.jsp?id=" + $("#txtId").val()
+		$.get(url, null, showName); // Make AJAX call 
+	}
+	function showName(response) {
+		 if (response.trim().length == 0)
+			 $("#empname").html("Employee Not Found!")
+		 else
+			 $("#empname").html(response)
+	}
+</script>
+
+</head>
+<body>
+	<h1>Change Employee Name</h1>
+	Employee id <br/>
+	<input type="text" id="txtId" onBlur="getName()" />
+	<span id="empname"></span>
+	<p></p>
+	New Name <br/>
+	<input type="text" id="txtName" />
+	<p></p>
+	<button>Update</button>
+
+</body>
+</html>

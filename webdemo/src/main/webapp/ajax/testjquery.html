@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Test</title>
+<!-- <script src="jquery-4.0.0.min.js"></script>  -->
+
+<script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+<script>
+   function sayHello() {
+	   alert("Hello " + $("#txtName").val())
+   }
+</script>
+</head>
+<body>
+<h1>Testing jQuery</h1>
+Name <input type="text" id="txtName" />
+<p></p>
+<button onClick="sayHello()">Hello </button>
+
+</body>
+</html>

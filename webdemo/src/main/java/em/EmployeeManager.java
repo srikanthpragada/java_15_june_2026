@@ -23,6 +23,26 @@ public class EmployeeManager {
 		Connection con = DriverManager.getConnection(url);
 		return con;
 	}
+	
+	public static String getEmployeeName(String id) throws Exception {
+
+		try (Connection conn = getConnection()) {
+			CachedRowSet rowSet = RowSetProvider.newFactory().createCachedRowSet();
+			rowSet.setCommand("select emp_name from employees where emp_id = ?");
+			rowSet.setString(1, id);
+			rowSet.execute(conn); // link with connection and execute SQL
+
+			String name = "";
+			
+			if (rowSet.next()) // found employee ?
+				name = rowSet.getString(1);
+			
+			return name;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return "";
+		}
+	}
 
 	public static CachedRowSet getEmployees() throws Exception {
 
