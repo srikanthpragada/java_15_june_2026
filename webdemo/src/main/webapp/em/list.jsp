@@ -38,7 +38,7 @@
 			<td><%=employees.getString("emp_name")%></td>
 			<td><%=employees.getString("emp_job")%></td>
 			<td><%=employees.getString("emp_dept_id")%></td>
-			<td><%=employees.getInt("emp_salary")%></td>
+			<td style='text-align:right'><%=employees.getInt("emp_salary")%></td>
 			<td style="text-align: center">
 			    <a href="edit.jsp?id=<%=id%>">Edit</a>
 				<a href="deleteEmployee.jsp?id=<%=id%>"

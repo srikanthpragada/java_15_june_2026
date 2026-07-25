@@ -44,6 +44,7 @@ public class EmployeeManager {
 		}
 	}
 
+	// Returns CachedRowSet on success, null on failure 
 	public static CachedRowSet getEmployees() throws Exception {
 
 		try (Connection conn = getConnection()) {

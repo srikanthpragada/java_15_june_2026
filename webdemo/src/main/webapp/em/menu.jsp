@@ -9,5 +9,7 @@
   &nbsp;
   <a href="add.jsp">Add</a>
   &nbsp;
-  <a href="list.jsp">List</a>
+  <a href="list.jsp">List</a> 
+  &nbsp;
+  <a href="search.jsp">Search</a>
  </div>
